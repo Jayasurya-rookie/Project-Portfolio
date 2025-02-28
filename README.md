@@ -1,0 +1,1 @@
+I am currently developing a responsive portfolio using HTML, CSS, and JavaScript. It's still in progress, but I'm focusing on creating a visually appealing and user-friendly design while improving my frontend development skills."
