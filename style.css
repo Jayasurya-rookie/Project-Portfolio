@@ -29,6 +29,12 @@ body{
     color:var(--text-color);
 
 }
+
+
+
+
+
+
 /* nav bar header  */
 .header{
     position: fixed;
@@ -49,6 +55,7 @@ body{
 .header.sticky{
     background: var(--bg-color);
 }
+
 /* portfolio logo */
 .logo{
     /* position: relative; */
@@ -433,8 +440,10 @@ section{
 .about-img img{
     width:90%;
     height: 90%;
+    object-fit:cover;
     border-radius: 50%;
     border:0.2rem solid var(--main-color);
+    
 }
 .about-img .circle-spin{
     position: absolute;
@@ -654,7 +663,7 @@ section{
     background: var(--main-color);
 }
 .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span{
-    width: 90%;
+    width: 80%;
 }
 .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span{
     width: 70%;
@@ -667,7 +676,7 @@ section{
 }
 /* span  */
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span{
-    width: 90%;
+    width: 80%;
 }
 .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
     width: 80%;
@@ -845,4 +854,89 @@ section{
 #submit-btn{
     /* border: 2px solid red; */
     width: 100%;
+}
+
+/* BREAKPOINTS */
+
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+/* max width for 991 pixels */
+@media (max-width:991px){
+    .header{
+        padding: 2rem 4%;
+    }
+    section{
+        padding: 10rem 4% 2rem;
+    }
+    .home{
+        padding: 0 4%;
+    }
+    .footer{
+        padding: 2rem 4%;
+    }
+}
+/*  */
+@media (max-width:768px){
+    .header{
+        background: var(--bg-color);
+    }
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;border:2px solid red;
+        padding: 1rem 4%;
+        background:var(--bg-color);
+        box-shadow: 0.5rem 1rem rgba(0,0,0,.2);
+        transition:.25s ease;
+        transition-delay:.25s;
+        z-index: 1;
+
+
+    }
+
+    .navbar .active{
+        left: 0;
+        transition-delay: 0s;
+        
+    }
+    .navbar .active-nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: yellowgreen;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        z-index: -1;
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+    .navbar .active .active-nav{
+        transition-delay: .25s;
+        left: 0;
+        transition-delay: 3rem 0;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin:3rem 0;
+        transform: translateX(-20rem);
+        transition-delay: 0s;
+        transition:.25s ease;
+
+    }
+
+    .navbar.active a{
+        transform: translateX(0);
+        transition-delay: .25s;
+    }
+
 }
